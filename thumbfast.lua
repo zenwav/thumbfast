@@ -459,7 +459,8 @@ local function spawn(time)
 
     local args = {
         mpv_path, "--no-config", "--msg-level=all=no", "--idle", "--pause", "--keep-open=always", "--really-quiet", "--no-terminal",
-        "--load-scripts=no", "--osc=no", "--ytdl=no", "--load-stats-overlay=no", "--load-osd-console=no", "--load-auto-profiles=no",
+        "--load-scripts=no", "--osc=no", "--ytdl=no", "--load-stats-overlay=no", "--load-console=no", "--load-select=no", "--load-positioning=no", 
+        "--load-commands=no", "--clipboard-backends-clr", "--load-auto-profiles=no",
         "--edition="..(properties["edition"] or "auto"), "--vid="..(vid or "auto"), "--no-sub", "--no-audio",
         "--start="..time, allow_fast_seek and "--hr-seek=no" or "--hr-seek=yes",
         "--ytdl-format=worst", "--demuxer-readahead-secs=0", "--demuxer-max-bytes=128KiB",
